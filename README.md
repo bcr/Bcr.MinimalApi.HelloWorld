@@ -4,3 +4,8 @@
 
 dotnet new web -o Bcr.MinimalApi.HelloWorld
 dotnet add package Serilog.AspNetCore
+
+## Useful Links
+
+https://andrewlock.net/version-vs-versionsuffix-vs-packageversion-what-do-they-all-mean/
+https://stackoverflow.com/questions/72652384/dotnet-semantic-versioning-and-release-with-github-actions
