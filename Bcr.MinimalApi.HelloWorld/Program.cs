@@ -6,6 +6,7 @@ builder.Host.UseSerilog((context, config) =>
 {
     config.WriteTo.Console();
 });
+builder.Services.AddHealthChecks();
 
 var app = builder.Build();
 
@@ -21,6 +22,7 @@ var logger = app.Services.GetRequiredService<ILogger<Program>>();
 }
 
 app.MapGet("/", () => "Hello World!");
+app.MapHealthChecks("/healthz");
 
 app.Run();
 
