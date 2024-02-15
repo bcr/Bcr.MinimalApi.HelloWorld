@@ -7,6 +7,7 @@ builder.Host.UseSerilog((context, config) =>
     config.WriteTo.Console();
 });
 builder.Services.AddHealthChecks();
+builder.Services.AddHostedService<MyBackgroundService>();
 
 var app = builder.Build();
 
